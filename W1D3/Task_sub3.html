@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div style="text-align: center;">
+    <h2>Task 3 - String array with index of Papaya </h2>
+    <br>
+    <input type="button" value="Click to display index on console" onclick="myFunction()">
+  </div>
+
+  <script>
+
+    function myFunction() 
+    {
+      var data = [
+        {
+          id: 1,
+          fruit: "apple"
+        },
+        {
+          id: 2,
+          fruit: "banana"
+        },
+        {
+          id: 3,
+          fruit: "papaya"
+        }
+      ];
+
+      console.log('Actual data available: ', data);
+      var findPapayaIndex = data.findIndex(x => x.fruit === 'papaya'); // Returns only object which has data with fruit as papaya.
+      console.log('Papaya index: ', findPapayaIndex);
+    }
+
+
+
+  </script>
+</body>
+
+</html>
