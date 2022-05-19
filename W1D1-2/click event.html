@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div style="padding-left: 100px;">
+    <h3>Increment number Demo</h3>
+    <p id="demo">0</p>
+    <button type="button" onclick="myFunction()">Click to Add</button>
+  </div>
+  <script>
+    function myFunction() {
+      var i =  Number(document.getElementById("demo").innerText) + 1;
+      document.getElementById("demo").innerText  = i.toString();
+    }
+  </script>
+</body>
+
+</html>

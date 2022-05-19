@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="container" style="padding-left: 100px;">
+
+    <!-- Length -->
+    <div>
+    <h3>Length of Anushka</h3>
+    <input type="button" value="Get Length" onclick="myFunction1()">
+  </div>
+  <br>
+
+  <!-- Lowercase -->
+  <div>
+    <h3>Lowercase of ANUSHKA</h3>
+    <input type="button" value="To Lowercase" onclick="myFunction2()">
+  </div>
+<br>
+
+  <!-- Uppercase -->
+  <div>
+    <h3>Uppercase of anushka</h3>
+    <input type="button" value="To Uppercase" onclick="myFunction3()">
+  </div>
+  <br>
+
+  <!-- Trim -->
+  <div>
+    <h3>Trim Anushka</h3>
+    <input type="button" value="To Trim" onclick="myFunction4()">
+  </div>
+  <br>
+
+  <!-- Starts with -->
+  <div>
+    <h3>Starts With for Anushka</h3>
+    <input type="button" value="Starts With" onclick="myFunction5()">
+  </div>
+  <br>
+
+  <!-- Ends With -->
+  <div>
+    <h3>Ends With for Anushka</h3>
+    <input type="button" value="Ends With" onclick="myFunction6()">
+  </div>
+  <br>
+
+</div>
+
+  <script>
+    
+    //Length
+    function myFunction1() 
+    {
+      var x = "Anushka";
+      alert("Length of " + x + " is: " + x.length);
+    }
+
+    //Lowercase
+    function myFunction2() 
+    {
+      var x = "ANUSHKA";
+      alert("Lowercase of " + x + " is: " + x.toLowerCase());
+    }
+
+    //Uppercase
+    function myFunction3() 
+    {
+      var x = "anushka";
+      alert("UpperCase of " + x + " is: " + x.toUpperCase());
+    }
+
+    //Trim
+    function myFunction4() 
+    {
+      var x = " ANUSHKA ";
+      alert("Trim of " + x + " is: " + x.trim());
+    }
+
+    //Starts With
+    function myFunction5() 
+    {
+      var x = "ANUSHKA";
+      alert("Does string Starts with character k  of " + x + " is: " + x.startsWith("A"));
+    }
+
+    //Ends With
+    function myFunction6() 
+    {
+      var x = "ANUSHKA";
+      alert("Does string ends with character L  of " + x + " is: " + x.endsWith("A"));
+    }
+
+  </script>
+
+</body>
+
+</html>

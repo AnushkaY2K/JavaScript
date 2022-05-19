@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="container" style="padding-left: 100px;">
+<h2 style="text-align: center;">Array Demo in Javascript</h2>
+    <!-- Sort -->
+    <div>
+        <h3>Sorting in array</h3>
+        <input type="button" value="Sort" onclick="myFunction1()">
+      </div>
+      <br>
+
+    <!-- Modifying array item value -->
+    <div>
+        <h3>Modifying array item value</h3>
+        <input type="button" value="Modifying array" onclick="myFunction2()">
+      </div>
+      <br>
+
+    <!-- For Loop -->
+    <div>
+        <h3>For Loop</h3>
+        <input type="button" value="For Loop" onclick="myFunction3()">
+      </div>
+      <br>
+
+    <!-- Foreach -->
+    <div>
+        <h3>Foreach</h3>
+        <input type="button" value="Foreach" onclick="myFunction4()">
+      </div>
+      <br>
+
+    <!-- Foreach with objects -->
+    <div>
+        <h3>Foreach with objects</h3>
+        <input type="button" value="Foreach with objects" onclick="myFunction5()">
+      </div>
+      <br>
+
+    <!-- Foreach with objects (modify second item in an array to anushka2) -->
+    <div>
+        <h3>Foreach with objects (modify second item in an array to anushka2)</h3>
+        <input type="button" value="modify second item" onclick="myFunction6()">
+      </div>
+      <br>
+
+    <!-- Filter() with numbers or strings -->
+    <div>
+        <h3>Filter() with numbers or strings</h3>
+        <input type="button" value="Filter" onclick="myFunction7()">
+      </div>
+      <br>
+
+
+    <!-- Filter() with objects -->
+    <div>
+        <h3>Filter() with objects</h3>
+        <input type="button" value="Filter" onclick="myFunction8()">
+      </div>
+      <br>
+
+    <!-- some() – When atleast 1 value matches in array returns true. -->
+    <div>
+        <h3>some() When atleast 1 value matches in array returns true</h3>
+        <input type="button" value="Some" onclick="myFunction9()">
+      </div>
+      <br>
+
+    <!-- Find() // returns one object which has name kamal -->
+    <div>
+        <h3>Find() returns one object which has name kamal</h3>
+        <input type="button" value="Finf" onclick="myFunction10()">
+      </div>
+      <br>
+
+    <!-- findIndex() gets index of matching element in array -->
+    <div>
+        <h3>findIndex() gets index of matching element in array</h3>
+        <input type="button" value="FindIndex" onclick="myFunction11()">
+      </div>
+      <br>
+
+    <!-- Unique values (return just single prop value) -->
+    <div>
+        <h3>Unique values (return just single prop value)</h3>
+        <input type="button" value="Unique Val" onclick="myFunction12()">
+      </div>
+      <br>
+
+    <!-- Unique values (return with objects with unique values) -->
+    <div>
+        <h3>Unique values (return with objects with unique values)</h3>
+        <input type="button" value="Unique Val" onclick="myFunction13()">
+      </div>
+      <br>
+
+</div>
+
+  <script>
+
+    //Sort
+    function myFunction1() 
+    {
+        var cars = ["Saab", "Volvo", "BMW"];
+        cars[0] = "Skoda"; // We are updating first item to "Skoda"
+        cars.sort();
+        alert("Sorted items are: " + cars[0] + "," + cars[1] + "," + cars[2]);
+    }
+
+    //Modifying array item value
+    function myFunction2() 
+    {
+      var cars = ["Saab", "Volvo", "BMW"];
+      cars[0] = "Skoda"; // We are updating first item to "Skoda"
+      alert("First item in an array is: " + cars[0]);
+    }
+
+    //For loop
+    function myFunction3() 
+    {
+      var data = [
+        {
+          id: 1,
+          name: "anushka"
+        },
+        {
+          id: 2,
+          name: "vasu"
+        }
+      ];
+
+      console.log('data available are: ', data);
+      for (i = 0; i < data.length; i++) {
+        console.log('each element is: ', data[i].name);
+      }
+    }
+
+    //Foreach 
+    function myFunction4() 
+    {
+      var numbers = [45, 4, 9, 16, 25];
+
+      console.log('Numbers available are: ', numbers);
+      
+      numbers.forEach((x) => {
+        console.log('each element is: ', x);
+      });
+    }
+
+    //Foreach with Objects
+    function myFunction5() 
+    {
+      var data = [
+        {
+          id: 1,
+          name: "anushka"
+        },
+        {
+          id: 2,
+          name: "vasu"
+        },
+        {
+          id: 3,
+          name: "sid"
+        }
+      ];
+
+      console.log('data available is: ', data);
+      
+      data.forEach((x) => {
+        console.log('each element is: ', x);
+      });
+    }
+
+    //Foreach with objects (modify second item in an array to kamal2)
+    function myFunction6() 
+    {
+      var data = [
+        {
+          id: 1,
+          name: "anushka"
+        },
+        {
+          id: 2,
+          name: "vasu"
+        },
+        {
+          id: 3,
+          name: "sid"
+        }
+      ];
+
+      console.log('data available is: ', data);
+      
+      data.forEach((x, i) => {
+        if (i == 1) {
+          x.name = 'anushka2'; // when index matched with 1 that means second item in an array changing to anushka2.
+        }
+        console.log('each element is: ', x);
+      });
+    }
+
+    //Filter() with numbers or strings
+    function myFunction7() 
+    {
+      var numbers = [45, 4, 9, 16, 25];
+      var filteredValues = numbers.filter(x => x > 16); // Gets numbers greater than 16
+      console.log('Filtered data', filteredValues);
+    }
+
+    //Filter() with objects
+    function myFunction8() 
+    {
+      var data = [
+        {
+          id: 1,
+          name: "anushka",
+          age: 21
+        },
+        {
+          id: 2,
+          name: "vasu",
+          age: 22
+        },
+        {
+          id: 3,
+          name: "sid",
+          age: 20
+        }
+      ];
+      console.log('Actual data', data);
+      var filteredValues = data.filter(x => x.age === 21); // Gets data with age = 21.
+      console.log('Filtered data', filteredValues);
+    }
+
+    //Find() // returns one object which has name anushka
+    function myFunction9() 
+    {
+      var data = [
+      {
+          id: 1,
+          name: "anushka",
+          age: 21
+        },
+        {
+          id: 2,
+          name: "vasu",
+          age: 22
+        },
+        {
+          id: 3,
+          name: "sid",
+          age: 20
+        }
+      ];
+      console.log('Actual data', data);
+      var findAnushka = data.find(x => x.name === 'Anushka'); // Returns only object which has data with name Anushka.
+      console.log('Anushka object: ', findAnushka);
+    }
+
+    //some() When atleast 1 value matches in array returns true.
+    function myFunction10() {
+      var data = [
+        {
+          id: 1,
+          name: "anushka",
+          age: 21
+        },
+        {
+          id: 2,
+          name: "vasu",
+          age: 22
+        },
+        {
+          id: 3,
+          name: "sid",
+          age: 20
+        }
+      ];
+      console.log('Actual data', data);
+      var isAanushkaExist = data.some(x => x.name === 'anushka'); // Returns true if atleast array contains one name with "Anushka"
+      console.log('Is Anushka exist: ', isAnushkaExist);
+    }
+
+
+    //findIndex() gets index of matching element in array
+    function myFunction11() 
+    {
+      var data = [
+      {
+          id: 1,
+          name: "anushka",
+          age: 21
+        },
+        {
+          id: 2,
+          name: "vasu",
+          age: 22
+        },
+        {
+          id: 3,
+          name: "sid",
+          age: 20
+        }
+      ];
+      console.log('Actual data', data);
+      var findAnushkaIndex = data.findIndex(x => x.name === 'Anushka'); // Returns only object which has data with name Anushka.
+      console.log('Anushka index: ', findAnushkaIndex);
+    }
+
+    //Unique values (return just single prop value)
+    function myFunction12() {
+      const data = [
+        { group: 'A', name: 'SD' },
+        { group: 'B', name: 'FI' },
+        { group: 'A', name: 'MM' },
+        { group: 'B', name: 'CO' }
+      ];
+      console.log('actual values', data);
+      const unique = [...new Set(data.map(item => item.group))]; // [ 'A', 'B']
+      console.log('unique group values', unique);
+    }
+
+    //Unique values (return with objects with unique values)
+    function myFunction13() {
+      var newarray = [{
+        Email: "test3@gmail.com",
+        ID: "A"
+      }, {
+        Email: "test2@gmail.com",
+        ID: "B"
+      }, {
+        Email: "test3@gmail.com",
+        ID: "A"
+      }, {
+        Email: "test4@gmail.com",
+        ID: "C"
+      }, {
+        Email: "test4@gmail.com",
+        ID: "C"
+      }];
+
+      // Array to keep track of duplicates
+      var uniques = newarray.filter((s => a => !s.has(a.ID) && s.add(a.ID))(new Set));
+
+      console.log('actual values', newarray);
+      console.log('unique object values', uniques);
+    }
+
+  </script>
+
+</body>
+
+</html>

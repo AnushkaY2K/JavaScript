@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div style="text-align: center;">
+    <h2>Closures in JavaScript</h2>
+    <br>
+    <h3>Demo</h3>
+    <p id="demo">Current Date is: </p>
+    <button id="btnId" type="button"> Click to Add</button>
+  </div>
+  <script>
+    document.getElementById("btnId").addEventListener("click", displayDate);
+
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+  </script>
+</body>
+
+</html>

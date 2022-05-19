@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<div class="container" style="padding-left: 100px;">
+    <h2 style="text-align: center;">JavaScript Basic Dom methods Demo</h2>
+
+  <!-- Read by ID for <p> tag -->
+  <div>
+   
+    <h3>Read by ID for "<p>" tag</h3>
+    <p id="demo">123</p>
+    <button type="button" onclick="myFunction()">Click Me</button>
+  </div>
+  <br>
+
+  <!-- Read by ID for other tags (input, label…) -->
+  <div>
+    
+    <h3>Read by ID for other tags (input, label…)</h3>
+    <label for="xValue" id="fName">Enter value for FirstName:</label><br>
+    <input type="text" id="xValue" name="xValue" value=""><br>
+    <button type="button" onclick="myFunction2()">Click Me</button>
+  </div>
+  <br>
+
+
+  <!-- Read by Class Name -->
+  <div>
+    
+    <h3>Read by Class Name</h3>
+    <input type="text" id="xValue" name="xValue" class="someClass" value=""><br>
+    <input type="text" id="yValue" name="yValue" class="someClass" value=""><br>
+
+    <button type="button" onclick="myFunction3()">Click Me</button>
+  </div>
+  <br>
+
+  <!-- Read by element name -->
+  <div>
+   
+    <h3>Read by element name</h3>
+    <input type="text" id="xValue" name="enterValue" class="xValue" value=""><br>
+    <input type="text" id="yValue" name="enterValue" class="yValue" value=""><br>
+
+    <button type="button" onclick="myFunction4()">Click Me</button>
+  </div>
+  <br>
+
+  <!-- Read by Tag Name -->
+  <div>
+    
+    <h3>Read by Tag Name</h3>
+    <label for="xValue" id="fName">Enter value for FirstName:</label><br>
+    <input type="text" id="xValue" name="xValue" class="someClass" value=""><br>
+
+    <label for="yValue" id="yName">Enter value for LastName:</label><br>
+    <input type="text" id="yValue" name="yValue" class="someClassY" value=""><br>
+
+    <button type="button" onclick="myFunction5()">Click to Add</button>
+  </div>
+  <br>
+
+  <!-- Task_Sub2 -->
+  <div>
+    
+    <h3>Task_Sub2</h3>
+    <label for="xVal" id="sVal">Enter Some value:</label><br>
+    <input type="text" id="xVal" name="xVal" value=""><br>
+    <button type="button" onclick="myFunction6()">Click Me</button>
+  </div>
+  <br>
+</div>
+
+
+
+
+
+  <script>
+    
+    //Read by ID for <p> tag
+    function myFunction() 
+    {
+      var element =  document.getElementById("demo");
+      console.log('Log html by id', element);
+      console.log('Log html inner value by id', element.innerText );
+    }
+
+    //Read by ID for other tags (input, label…)
+    function myFunction2() 
+    {
+      var element = document.getElementById("xValue");
+      console.log('Log html by id', element);
+      console.log('Log html inner value by id', element.value);
+    }
+
+    //Read by Class Name 
+    function myFunction3() 
+    {
+      var element = document.getElementsByClassName("someClass");
+      console.log('Log html list', element);
+      console.log('Log html inner value 1', element[0].value);
+      console.log('Log html inner value 2', element[1].value);
+    }
+
+    //Read by element name 
+    function myFunction4() 
+    {
+      var element = document.getElementsByName("enterValue");
+      console.log('Log html list', element);
+      console.log('Log html inner value 1', element[0].value);
+      console.log('Log html inner value 2', element[1].value);
+    }
+
+    //Read by Tag Name 
+    function myFunction5() {
+      var element = document.getElementsByTagName("input");
+      console.log('Log html list', element);
+      console.log('Log html inner value1', element[0].value);
+      console.log('Log html inner value2', element[1].value);
+    }
+
+     //Task_Sub2 
+     function myFunction6() 
+    {
+      var element = document.getElementById("xVal");
+      console.log('Log html by id', element);
+      console.log('Log html inner value by id', element.value);
+      alert(element.value);
+    }
+    
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div style="padding-left: 100px;">
+    <h3>Nested Function</h3>
+    <form>
+      <label for="xValue">Enter first value:</label><br>
+      <input type="number" id="xValue" name="xValue" value="0"><br>
+
+      <label for="yValue">Enter second value:</label><br>
+      <input type="number" id="yValue" name="yValue" value="0"><br><br>
+
+      <input type="button" value="Addition" onclick="addFunction()">
+
+      <br>
+      <label>Sum of two number: </label>
+      <label id="sumValue">0</label>
+    </form>
+  </div>
+  
+  <script>
+    function addFunction() 
+    {
+      var x = Number(document.getElementById("xValue").value);
+      var y = Number(document.getElementById("yValue").value);
+      var sum = sumOfValues(x , y);
+      document.getElementById("sumValue").innerHTML = sum.toString();
+    }
+
+    function sumOfValues(x, y) 
+    {
+      return x + y;
+    }
+  </script>
+</body>
+
+</html>

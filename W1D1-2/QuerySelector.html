@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="container" style="padding-left: 100px;">
+        <h2 style="text-align: center;">JavaScript Basic querySelectorAll methods Demo</h2>
+    
+      <!-- Ready by class name -->
+      <div>
+        <h3>Ready by class name</h3>
+        <input type="text" id="xValue" name="xValue" class="someClass someClass1" value=""><br>
+        <input type="text" id="xValue" name="yValue" class="someClass someClass2" value=""><br>
+    
+        <button type="button" onclick="myFunction()">Click Me</button>
+        </div>
+        <br>
+
+        
+      <!-- Read by ID -->
+      <div>
+        
+        <h3>Read by ID</h3>
+        <input type="text" id="xValue" name="xValue" class="someClass someClass1" value=""><br>
+        <input type="text" id="xValue" name="yValue" class="someClass someClass2" value=""><br>
+    
+        <button type="button" onclick="myFunction2()">Click to Add</button>
+      </div>
+      <br>
+
+      <!-- Read by multiple nested conditions with class and class combination  -->
+      <div>
+       
+        <h3>Read by multiple nested conditions with class and class combination</h3>
+        <div id="someIdInput" class="someClassInput">
+            <input type="text" id="nestedInput1" name="nestedInput1" class="someClassInput1" value=""><br>
+            <input type="text" id="nestedInput2" name="nestedInput2" class="someClassInput2" value=""><br>
+        </div>
+      
+        <button type="button" onclick="myFunction3()">Click to Add</button>
+        </div>
+      
+      <br>
+    
+      <!-- Read by multiple nested conditions with id and class combination  -->
+      <div>
+        <h3>Read by multiple nested conditions with id and class combination</h3>
+        <div id="someIdInput" class="someClassInput">
+          <input type="text" id="nestedInput1" name="nestedInput1" class="someClassInput1" value=""><br>
+          <input type="text" id="nestedInput2" name="nestedInput2" class="someClassInput2" value=""><br>
+        </div>
+    
+        <button type="button" onclick="myFunction4()">Click to Add</button>
+      </div>    
+      <br>
+    
+      <!-- Click Event (change other element values) -->
+      <div>
+        
+        <h3>Click Event (change other element values)</h3>
+        <p id="demo">QuerySelector Demo.</p>
+        <button type="button" onclick="myFunction5()">Change Para Text</button>
+      </div>    
+      <br>
+
+      <!-- Increment number demo -->
+      <div>
+        <h2>JavaScript in Body</h2>
+        <p id="demo">0</p>
+        <button type="button" onclick="myFunctionInc()">Click to Add</button>
+      </div>    
+      <br>
+
+      <!-- Sum of 2 Numbers -->
+      <div>
+        <h3>Sum of 2 Numbers</h3>
+        <form>
+          <label for="xValue">Enter value for x:</label><br>
+          <input type="number" id="xValue" name="xValue" value="0"><br>
+    
+          <label for="yValue">Enter value for y:</label><br>
+          <input type="number" id="yValue" name="yValue" value="0"><br><br>
+    
+          <input type="button" value="Click to Add" onclick="addFunction7()">
+    
+          <br>
+          <label>Sum of two numbers: </label>
+          <label id="sumValue">0</label>
+        </form>
+      </div>
+      <br>
+
+      <!-- Nested Functions -->
+      <div>
+        
+        <h3>Nested Functions</h3>
+        <form>
+          <label for="xValue">Enter value for x:</label><br>
+          <input type="number" id="xValue" name="xValue" value="0"><br>
+    
+          <label for="yValue">Enter value for y:</label><br>
+          <input type="number" id="yValue" name="yValue" value="0"><br><br>
+    
+          <input type="button" value="Click to Add" onclick="addFunction8()">
+    
+          <br>
+          <label>Sum of x & y: </label>
+          <label id="sumValue">0</label>
+        </form>
+      </div>
+      <br>
+    
+      <!-- Concatenate String -->
+      <div>
+        <h3>Concatenate String</h3>
+        <form>
+          <label for="xValue">Enter value for FirstName:</label><br>
+          <input type="text" id="xValue" name="xValue" value=""><br>
+    
+          <label for="yValue">Enter value for LastName:</label><br>
+          <input type="text" id="yValue" name="yValue" value=""><br>
+          
+          <label for="zValue">Enter Date of Birth:</label><br>
+          <input type="date" id="zValue" name="zValue" value=""><br><br>
+    
+          <input type="button" value="Click to Add" onclick="myFunction9()">
+    
+          <br>
+          <label>Your Full name: </label>
+          <label id="fullName"></label>
+          <br>
+          <label>Your Date of birth is: </label>
+          <label id="dob"></label>
+        </form>
+      </div>
+      <br>
+
+      <!-- Events (oninput, onkeyup, onkeypress, onmouseover, onblur) -->
+      <div>
+        <h3>Events (oninput, onkeyup, onkeypress, onmouseover, onblur)</h3>
+        <form>
+          <label for="xValue">OnInput Demo: </label><br>
+          <input type="text" id="xValue" name="xValue" oninput="myInput()"><br>
+          <label id="onInputDemo"></label><br><br>
+    
+          <label for="yValue">KeyUp Demo: </label><br>
+          <input type="text" id="yValue" name="yValue" onkeyup="keyUpFunction()"><br><br>
+    
+          <label for="zValue">Keypress Demo: </label><br>
+          <input type="text" id="zValue" name="zValue" onkeypress="keyPressFunction(event)"><br><br>
+    
+          <label for="aValue">Mouse over Demo: </label><br>
+          <input type="text" id="aValue" name="aValue" onmouseover="mouseOverFunction(this)" onmouseleave="mouseLeaveFunction(this)"><br><br>
+    
+          <label for="bValue">FocusOut(blur) Demo: </label><br>
+          <input type="text" id="bValue" name="bValue" onblur="blurFunction(event)"><br><br>
+        </form>
+      </div>
+    <br>
+    </div>
+    
+  <script>
+    //Ready by class name
+    function myFunction() 
+    {
+      // ********** To read by class name, use (.) before name************
+      console.log('To read by class name', document.querySelectorAll(".someClass"));
+    }
+
+    //Ready by Id 
+    function myFunction2() 
+    {
+      // ********** To read by id, use (#) before id************
+      console.log('To read by id', document.querySelectorAll("#xValue"));
+    }
+
+    //Read by multiple nested conditions with class and class combination 
+    function myFunction3() 
+    {
+        // ********** To read by matching condition by nested html class name, use (.) before name and space after name************
+        var elementsNested = document.querySelectorAll(".someClassInput .someClassInput1");
+        console.log('elementsNested by matching condition by class name', elementsNested);
+
+        elementsNested.forEach((x, index) => {
+        console.log('elementsNested condition Log html inner value: ', x.value);
+        });
+    }
+
+    //Read by multiple nested conditions with id and class combination
+    function myFunction4() 
+    {
+        // ********** To read by matching condition by nested html id with class name, use (.) before name************
+        var elementsNested2 = document.querySelectorAll("#someIdInput .someClassInput1");
+        console.log('elementsNested with class and class by matching condition by class name', elementsNested2);
+
+        elementsNested2.forEach((x, index) => {
+        console.log('elementsNested with id and class condition Log html inner value: ', x.value);
+        });
+    }
+
+    //Click Event (change other element values)
+    function myFunction5() 
+    {
+      document.getElementById("demo").innerText = "Hello JavaScript for QuerySelector!"
+    }
+
+    //Increment number Demo
+    function myFunctionInc() {
+      var i =  Number(document.getElementById("demo").innerText) + 1;
+      document.getElementById("demo").innerText  = i.toString();
+    }
+
+
+    //Sum of 2 Numbers
+    function addFunction7() 
+    {
+      var x = Number(document.getElementById("xValue").value);
+      var y = Number(document.getElementById("yValue").value);
+      document.getElementById("sumValue").innerHTML = (x + y).toString();
+    }
+
+    //Nested Functions
+    function addFunction8() 
+    {
+      var x = Number(document.getElementById("xValue").value);
+      var y = Number(document.getElementById("yValue").value);
+      var sum = sumOfValues(x , y);
+      document.getElementById("sumValue").innerHTML = sum.toString();
+    }
+
+    function sumOfValues8(x, y) 
+    {
+      return x + y;
+    }
+
+    //Concatenate String
+    function myFunction9() 
+    {
+      var x = document.getElementById("xValue").value;
+      var y = document.getElementById("yValue").value;
+      document.getElementById("fullName").innerHTML = (x + " " + y);
+      document.getElementById("dob").innerHTML = document.getElementById("zValue").value;
+    }
+
+    //Events (oninput, onkeyup, onkeypress, onmouseover, onblur)
+    function myInput() 
+    {
+      var x = document.getElementById("xValue").value;
+      document.getElementById("onInputDemo").innerHTML = "You wrote: " + x;
+    }
+
+    function keyUpFunction() 
+    {
+      var x = document.getElementById("yValue");
+      x.value = x.value.toUpperCase();
+    }
+
+    function keyPressFunction(event) 
+    {
+      console.log('keyPress', event);
+      alert('You pressed: ' + event.key);
+    }
+
+    function mouseOverFunction(event) 
+    {
+      event.style.fontSize = "18px";
+    }
+
+    function mouseLeaveFunction(event) 
+    {
+      event.style.fontSize = "12px";
+    }
+
+    function blurFunction(event) 
+    {
+      alert('You focused out input text with value: ' + event.target.value);
+    }
+
+  </script>
+</body>
+
+</html>

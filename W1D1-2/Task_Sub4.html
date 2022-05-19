@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="container" style="padding-left: 100px;">
+<h2 style="text-align: center;">Array Demo Task_Sub4</h2>
+
+    <!-- Filter() with numbers or strings -->
+    <div>
+        <h3>Filter() to get number less than 98</h3>
+        <input type="button" value="Filter" onclick="myFunction1()">
+      </div>
+      <br>
+    </div>
+
+    <script>
+  
+      
+      //Filter() with numbers or strings
+      function myFunction1() 
+      {
+        var numbers = [98, 65, 12, 102];
+        var filteredValues = numbers.filter(x => x < 98); // Gets numbers less than 98
+        console.log('Filtered data', filteredValues);
+      }
+
+    </script>
+
+</body>
+
+</html>

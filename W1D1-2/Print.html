@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div style="text-align: center;">
+    <h2 style="text-align: center;">Print page via Java Script</h2>
+    <p id="demo"> Contents</p>
+    <button type="button" onclick="myFunction()">Click me</button>
+    <button onclick="myPrint()">Print this page</button>
+  </div>
+  <script>
+    function myFunction() 
+    {
+      document.getElementById("demo").innerText = "Hello, I'm an intern at FIQ."
+    }
+
+    function myPrint() {
+      window.print();
+    }
+  </script>
+</body>
+
+</html>
